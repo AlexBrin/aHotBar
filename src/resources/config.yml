@@ -1,0 +1,31 @@
+---
+# Временная зона
+# Список поддерживаемых временных зон: https://secure.php.net/manual/ru/timezones.php
+timeZone: "Europe/Moscow"
+
+# Формат даты
+dateFormat: 'число-месяц-год час:минута:секунда'
+
+# 1 - Число
+# 2 - слово (на английском)
+# 3 - слово (на русском)
+monthFormat: 1
+
+# Смещение хотбара в сторону
+# Меньше 0 - влево
+# 0 - по центру
+# Больше 0 - вправо
+offset: 2
+
+# Текст хотбара
+# \n - перенос строки
+# {randColor} - случайный цвет
+# {player} - ник игрока
+# {onlineP} - количество игроков
+# {maxP} - максимум игроков
+# {balance} - баланс игрока (EconomyAPI)
+# {group} - группа игрока (PurePerms)
+# {balance} - баланс игрока (EconomyAPI)
+# {date} - текущая дата. Настройка даты выше
+text: '{randColor}○ §9{player} | {onlineP}/{maxP}\n{randColor}○ §9Баланс: §a{balance}\n{randColor}○ §9Должность: §a{group}\n{randColor}○ §9Дата: §a{date}'
+...
