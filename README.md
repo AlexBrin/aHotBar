@@ -3,7 +3,7 @@ aHotbar - хотбар для MCPE
 
 **Для разработчиков**:
 ```
-$hotbar = $pluginManager->getPlugin('aHotbar');
+$hotbar =  \AlexBrin\aHotbar::getInstance();
 
 // Тут так же работает дефолтное форматирование. Список замен ниже 
 
