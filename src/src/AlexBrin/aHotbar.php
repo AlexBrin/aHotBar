@@ -16,8 +16,9 @@
 		public $pureperms;
 
 		public $customFormat = [];
-
+                
 		public function onEnable() {
+                    self::$instance = $this;
 			if(!is_dir($this->getDataFolder()))
 				@mkdir($this->getDataFolder());
 			$this->saveDefaultConfig();
@@ -99,6 +100,14 @@
 			$player = $this->getPlayer($player);
 			return $this->customFormat[$player] ? $this->customFormat[$player] : null;
 		}
+                /*
+		 * Работа с основным классом aHotbar на прямую
+                 * 
+		 * @return aHotbar         
+		 */
+                public static function getInstance() : aHotbar{
+                    return self::$instance;
+                    }
 
 	}
 
