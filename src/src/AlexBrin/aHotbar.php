@@ -16,9 +16,10 @@
 		public $pureperms;
 
 		public $customFormat = [];
+
+		public static $instance;
                 
 		public function onEnable() {
-                    self::$instance = $this;
 			if(!is_dir($this->getDataFolder()))
 				@mkdir($this->getDataFolder());
 			$this->saveDefaultConfig();
@@ -37,6 +38,8 @@
 				$this->config["text"] = str_replace('\n', "\n".$off, $this->config["text"]);
 			} else 
 				$this->config["text"] = str_replace('\n', "\n", $this->config["text"]);
+
+      // self::$instance = $this;
 
 			$this->getServer()->getScheduler()->scheduleRepeatingTask(new Task($this, $this->config, $this->customFormat), 20);
 		}
@@ -105,9 +108,9 @@
                  * 
 		 * @return aHotbar         
 		 */
-                public static function getInstance() : aHotbar{
-                    return self::$instance;
-                    }
+    public static function getInstance() {
+      return self::$instance;
+    }
 
 	}
 

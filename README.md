@@ -92,7 +92,7 @@ aHotbar - hotbar for MCPE
 
 **For developers**:
 ```
-$hotbar = $pluginManager->getPlugin('aHotbar');
+$hotbar = \AlexBrin\aHotbar::getInstance();
 
 // There also works default formatting. List replacements below
 
